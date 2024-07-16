@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farolillos</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="header__nobackground">
+        <div class="header__overlay-nobackground">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img class="header__logo__img" src="assets/logo__hanamistudio.svg" alt="Logo Hanami Studio">
+                </a>
+            </div>
+            <nav class="header__menu">
+                <ul class="header__menu__links">
+                    <li class="header__menu__links__link"><a href="velas.html">Velas</a></li>
+                    <li class="header__menu__links__link"><a href="cuadros.html">Cuadros</a></li>
+                    <li class="header__menu__links__link"><a href="#">El Estudio</a></li>
+                </ul>
+                <button class="header__menu__toggle" aria-label="Abrir menú">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M4 6l16 0" />
+                        <path d="M4 12l16 0" />
+                        <path d="M4 18l16 0" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <nav class="header__menu--mobile">
+            <button class="header__menu__close" aria-label="cerrar menú">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="35" height="35" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+                    <path d="M9 9l6 6m0 -6l-6 6" />
+                </svg>
+            </button>
+            <ul class="header__menu__links--mobile">
+                <li class="header__menu__links__link"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                </svg></a></li>
+                <li class="header__menu__links__link"><a href="velas.html">Velas</a></li>
+                <li class="header__menu__links__link"><a href="cuadros.html">Cuadros</a></li>
+                <li class="header__menu__links__link"><a href="#">El Estudio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--BANNER-->
+    <div class="banner">
+        <img class="banner__img" src="assets/farolillos__background.webp" alt="farolillos japonseses encima de una mesa blanca">
+    </div>
+
+    <!--TEXTO INTRODUCTORIO COLECCIÓN FAROLILLOS-->
+    <section class="introduction">
+        <div class="introduction__container">
+            <h1 class="introduction__title">Colección de farolillos temporada primavera-verano</h1>
+            <p class="introduction__text">Descubre la calma y la belleza de nuestra colección de farolillos naturales. Confeccionados con materiales seleccionados con esmero y adornados con detalles artesanales, cada farolillo refleja la armonía y la pureza de la naturaleza, encapsulando la esencia genuina de Hanami Studio.</p>
+        </div>
+    </section>
+
+   <!-- GALERÍA FAROLILLOS -->
+    <div class="image-slider farolillos">
+        <div class="image-slider__container">
+            <button class="image-slider__button left farolillos" aria-label="Imagen anterior">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-chevron-left" width="30" height="30" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M13 15l-3 -3l3 -3" />
+                    <path d="M21 12a9 9 0 1 0 -18 0a9 9 0 0 0 18 0z" />
+                </svg>
+            </button>
+            <picture>
+                <img class="image-slider__image farolillos" src="assets/farolillos__galeria-one.webp" alt="farolillo japonés encima de una mesa" loading="lazy">
+            </picture>
+            <button class="image-slider__button right farolillos" aria-label="Imagen siguiente">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-chevron-right" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M11 9l3 3l-3 3" />
+                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!--IMÁGENES DESCOLOCADAS-->
+    <section class="staggered">
+        <div class="staggered__container">
+            <div class="staggered__bottom">
+                <picture>
+                    <img class="staggered__bottom-img" src="assets/farolillos__top.webp" alt="farolillo apoyado en el suelo con flores de cerezo" loading="lazy">
+                </picture>
+                <div class="staggered__bottom-text">
+                    <h2>Artesanía encantada</h3>
+                    <p>Todas las piezas están inspiradss en los mitos y leyendas niponas, cobrando vida en forma de farolillos naturales. Cada farolillo es cuidadosamente elaborada a mano por nuestros artesanos.</p>
+                </div>
+            </div>
+            <div class="staggered__top">
+                <picture>
+                    <img class="staggered__top-img" src="assets/farolillos__bottom.webp" alt="habitación con farolillos" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <!--TEXTO PRINCIPAL-->
+    <section class="principal">
+        <div class="principal__container">
+            <div class="principal__text">
+                <p>Farolillos 100% naturales que capturan la magia y la esencia de la tradición japonesa</p>
+            </div>
+            <div class="principal__img">
+                <picture>
+                    <img src="assets/farolillos__principal.webp" alt="" loading="lazy">
+                </picture>
+                <div class="principal__img-text">
+                    <h3>Serenidad lumínica</h3>
+                    <p>Cada uno de los farolillos está elaborado con materiales cuidadosamente seleccionados y decorados con detalles que evocan la esencia de la naturaleza japonesa. Transforma cualquier espacio en un refugio de paz y bienestar con luz natural, inspirada en la belleza y la simplicidad de los elementos vegetales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__column">
+            <div class="footer__logo">
+                <img src="assets/logo__hanamistudio.svg" alt="Logo Hanami Studio" loading="lazy">
+            </div>
+        </div>
+        <div class="footer__column">
+            <div class="footer__contact">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Hanami@studio.com</li>
+                    <li>+81 756 90 345</li>
+                    <li>Sunamachi Ginza, 3. Tokyo</li>
+                    <li>Política de privacidad y cookies</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__column">
+            <div class="footer__subscription">
+                <h4>Forma parte de la comunidad Hanami</h4>
+                <p>Sé el primero en conocer lo mejor de los productos, proyectos y colaboraciones de Hanami.</p>
+                <form action="" method="POST">
+                    <label><input type="radio" name="gender" value="Hombre"> Hombre</label>
+                    <label><input type="radio" name="gender" value="Mujer"> Mujer</label>
+                    <label><input type="radio" name="gender" value="Prefiero no decirlo"> Prefiero no decirlo</label>
+                    <input type="email" placeholder="Dirección de correo electrónico*" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

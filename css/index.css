@@ -1,0 +1,523 @@
+/*RESET Y CARACTERÍSTICAS COMUNES*/
+
+:root {
+    --section_spaces: 4em auto;
+    --section__width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+section {
+    margin: 0 auto;
+    padding: 4em 0;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1, span {
+    font-size: 35px;
+    font-weight: bolder;
+    line-height: 1.3em;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/*HEADER HOME*/
+.header {
+    position: relative;
+    background-image: url('../assets/background__home.webp');
+    background-size: cover;
+    background-position: center;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100vh;
+}
+
+.header__overlay {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(229, 231, 235, 0.8);
+    position: relative;
+    z-index: 1;
+    max-height: 17%;
+}
+
+.header__logo {
+    display: flex;
+    padding: 1.5em;
+}
+
+.header__logo__img {
+    display: flex;
+    max-width: 170px;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.header__menu__links {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-size: 18px;
+    padding: 2.5em;
+}
+
+.header__menu__links__link a {
+    display: flex;
+    color: #0a0a0a;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.header__menu__links__link a:hover {
+    color: #854d0e; 
+    transform: scale(1.1);
+}
+
+.header__menu__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 2em; 
+}
+
+/*MENU MOBILE RESPONSIVE*/
+.header__menu--mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 2em; 
+    width: 260px;
+    height: 300px; 
+    background-color: #f8fafc; 
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5em;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.header__menu--mobile.open {
+    display: flex;
+    transform: translateX(0);
+}
+
+.header__menu__close {
+    position: absolute;
+    top: 20px;
+    right: 20px; 
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header__menu__links--mobile {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-transform: uppercase;
+    padding: 2em; 
+    gap: 20px; 
+}
+
+.header__menu__links--mobile .header__menu__links__link a {
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Media queries para mobile menu */
+@media (max-width: 800px) {
+    .header__menu__links {
+        display: none;
+    }
+
+    .header__menu__toggle {
+        display: block;
+    }
+}
+
+
+.header__overlay-nobackground {
+    display: flex; 
+    justify-content: space-between;
+    text-transform: uppercase;
+
+
+}
+
+/*ÚLTIMOS PROYECTOS: FAROLILLOS Y CUADROS*/
+
+.proyectos {
+    max-width: var(--section__width); 
+    margin: var(--section_spaces)
+
+
+}
+.proyectos__content {
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 15px; 
+    line-height: 30px;
+}
+
+.proyectos__inner.left {
+    display: flex; 
+    flex: 1; 
+    margin: 2em; 
+    align-items: center; 
+   
+}
+
+.proyectos__inner.right {
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 20px;
+}
+
+
+.proyectos__inner-text {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;  
+    padding: 2em; 
+    gap: 20px; 
+}
+
+.img-vertical {
+    max-width: 90%; 
+}
+
+.img-horizontal {
+    max-width: 70%; 
+}
+
+
+/*CARRUSSEL VELAS*/
+
+.carrussel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7em; 
+    gap: 10px; 
+}
+
+.carrussel__items {
+    display: flex;
+    justify-content: space-evenly; 
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.carrussel__item {
+    position: relative;
+    gap: 40px; 
+    transition: transform 0.3s ease;
+}
+
+.carrussel__item:hover {
+    transform: scale(1.4);
+    z-index: 40; 
+}
+
+.carrussel__btn {
+    margin: 20px auto;
+    padding: 10px 60px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #0c0a09; 
+    border-radius: 2em;
+    color: #f1f5f9; 
+    text-transform: uppercase; 
+} 
+
+.carrussel__btn:hover {
+    background-color: #f1f5f9; 
+    color: #0c0a09; 
+}
+
+/*SLIDER*/ 
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin: 0;  
+    
+}
+
+.slider__container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider__img {
+    min-width: 100%;
+    transition: opacity 1s;
+}
+
+.slider__img img {
+    width: 100%;
+    display: block;
+}
+
+
+/* ESTILO DE LAS SECCIONES: VELAS, FAROLILLOS Y CUADROS*/
+
+/*BANNER PRINCIPAL*/ 
+
+.banner__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*INTRODUCTION*/
+
+.introduction {
+    display: flex; 
+    justify-content: center;
+    padding: 4em; 
+}
+
+.introduction__container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+    text-align: center;
+    line-height: 2em;
+    width: 50%; 
+}
+
+/*GALERÍA*/
+.image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 0 5em; 
+    text-align: center;
+}
+
+.image-slider__container {
+    position: relative;
+}
+
+.image-slider__image {
+    height: auto;
+    display: block;
+    border-radius: 20em;
+}
+
+.image-slider__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.image-slider__button.left {
+    left: 10px;
+}
+
+.image-slider__button.right {
+    right: 10px;
+}
+
+.image-slider__button svg:hover {
+   stroke: #f1f5f9; 
+
+}
+
+/*IMAGENES ESCALONADAS*/
+
+.staggered {
+    display: flex; 
+    padding: 4em; 
+}
+
+.staggered__container {
+    display: flex; 
+    justify-content: center;
+    gap: 4em; 
+}
+
+.staggered__top {
+    display: flex; 
+    max-width: 800px; 
+}
+
+.staggered__top-img {
+    margin: -80px 0px 0px 0px; 
+    max-width: 900px; 
+}
+
+.staggered__bottom {
+    display: flex; 
+    justify-content: space-between;
+    flex-direction: column; 
+    align-items: end; 
+}
+
+.staggered__bottom-img {
+    max-width: 400px;
+}
+
+.staggered__bottom-text {
+   display: flex; 
+   justify-content: baseline; 
+   flex-direction: column; 
+   align-items: end;
+   text-align: end;
+   font-size: 11px; 
+   gap: 5px; 
+   line-height: 20px;
+}
+
+/*PRINCIPAL TEXT*/
+
+.principal {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    padding: 4em; 
+}
+
+.principal__container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.principal__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px; 
+    text-align: center;
+    max-width: 15em;
+    font-weight: bold;
+    line-height: 1.7em;
+    text-transform: uppercase;
+    
+}
+.principal__img-text {
+    display: flex; 
+    flex-direction: column;
+    text-align: center; 
+    max-width: 800px; 
+    gap: 10px; 
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 23px;
+    font-size: 14px;
+}
+.principal__img img{
+    display: flex;
+    max-width: 800px;
+}
+
+
+/*FOOTER COMÚN EN TODAS LAS PÁGINAS DE LA WEB*/ 
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    background-color: #fafaf9;
+    padding: 2em;
+}
+
+.footer__column {
+    flex: 1;
+    padding: 0 1em;
+}
+
+.footer__logo img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.footer__contact, .footer__subscription {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__contact h4, .footer__subscription h4 {
+    font-size: 1.2em;
+}
+
+
+.footer__contact li {
+    line-height: 2.5;
+}
+
+.footer__subscription p {
+   
+    line-height: 2em;
+}
+
+.footer__subscription form {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+    gap: 5px;
+}
+
+.footer__subscription input {
+    padding: 0.5em;
+    border: 0.4px solid #9ca3af;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer__subscription button {
+    padding: 0.5em;
+    background-color: black;
+    color: #f1f5f9;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer__subscription button:hover {
+    background-color: #f1f5f9;
+    color: #0c0a09;
+}
+
+
+
+
+
+
