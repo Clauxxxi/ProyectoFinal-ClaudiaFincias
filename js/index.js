@@ -74,7 +74,6 @@ let farolillosGaleria = [
     'assets/farolillos__galeria-four.webp',
 ]
 
-
 document.querySelector('.image-slider__button.right.farolillos').addEventListener('click', nextFarolillos);
 document.querySelector('.image-slider__button.left.farolillos').addEventListener('click', prevFarolillos);
 
