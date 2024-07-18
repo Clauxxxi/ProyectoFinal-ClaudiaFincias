@@ -412,7 +412,6 @@ h2 {
 
 .staggered__bottom-text {
     display: flex;
-    justify-content: baseline;
     flex-direction: column;
     align-items: end;
     text-align: end;
