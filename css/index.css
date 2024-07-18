@@ -1,4 +1,4 @@
-/*RESET Y CARACTERÍSTICAS COMUNES*/
+/*RESET Y CARACTERÃSTICAS COMUNES*/
 
 :root {
     --section_spaces: 4em auto;
@@ -12,6 +12,14 @@
     font-family: "Raleway", sans-serif;
 }
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 section {
     margin: 0 auto;
     padding: 4em 0;
@@ -20,15 +28,17 @@ section {
 
 img {
     width: 100%;
+    height: auto;
 }
 
 ul li {
     list-style: none;
 }
 
-h1, span {
+h1,
+span {
     font-size: 35px;
-    font-weight: bold; 
+    font-weight: bold;
     line-height: 1.3em;
 }
 
@@ -36,8 +46,6 @@ h2 {
     font-size: 18px;
     font-weight: normal;
 }
-
-
 
 /*HEADER HOME*/
 .header {
@@ -48,13 +56,41 @@ h2 {
     text-transform: uppercase;
     width: 100%;
     height: 100vh;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
+
+.header__nobackground {
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    background-image: url('../assets/background__home.webp');
+    background-size: cover;
+    background-position: center;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
 
 .header__overlay {
     display: flex;
     justify-content: space-between;
     background-color: rgba(229, 231, 235, 0.8);
+    position: relative;
+    z-index: 1;
+    max-height: 17%;
+}
+
+.header__overlay-nobackground {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9fafb;
     position: relative;
     z-index: 1;
     max-height: 17%;
@@ -92,7 +128,7 @@ h2 {
 }
 
 .header__menu__links__link a:hover {
-    color: #854d0e; 
+    color: #854d0e;
     transform: scale(1.1);
 }
 
@@ -102,7 +138,7 @@ h2 {
     border: none;
     font-size: 2em;
     cursor: pointer;
-    padding: 2em; 
+    padding: 2em;
 }
 
 /*MENU MOBILE RESPONSIVE*/
@@ -111,10 +147,10 @@ h2 {
     position: fixed;
     top: 0;
     right: 0;
-    padding: 2em; 
+    padding: 2em;
     max-width: 100%;
-    height: 100%; 
-    background-color: #f8fafc; 
+    height: 100%;
+    background-color: #f8fafc;
     box-shadow: -1px 0 5px rgba(0, 0, 0, 0.5);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
@@ -129,7 +165,7 @@ h2 {
 .header__menu__close {
     position: absolute;
     top: 20px;
-    right: 20px; 
+    right: 20px;
     background: none;
     border: none;
     cursor: pointer;
@@ -140,8 +176,8 @@ h2 {
     flex-direction: column;
     list-style: none;
     text-transform: uppercase;
-    padding: 2em; 
-    gap: 20px; 
+    padding: 2em;
+    gap: 20px;
 }
 
 .header__menu__links--mobile .header__menu__links__link a {
@@ -162,91 +198,76 @@ h2 {
     }
 }
 
-
-.header__overlay-nobackground {
-    display: flex; 
-    justify-content: space-between;
-    text-transform: uppercase;
-
-
-}
-
-/*ÚLTIMOS PROYECTOS: FAROLILLOS Y CUADROS*/
-
+/*ULITMOS PROYECTOS: FAROLILLOS Y CUADROS*/
 .proyectos {
-    max-width: var(--section__width); 
+    max-width: var(--section__width);
     margin: var(--section_spaces)
-
-
 }
+
 .proyectos__content {
-    display: flex; 
-    justify-content: space-between; 
-    font-size: 15px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 15px;
     line-height: 30px;
 }
 
-.proyectos__inner.left {
-    display: flex; 
-    flex: 1; 
-    margin: 2em; 
-    align-items: center; 
-   
+.proyectos__inner {
+    display: flex;
+    flex: 1;
+    margin: 2em;
+    align-items: center;
 }
 
 .proyectos__inner.right {
     flex: 0.7;
-    display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     gap: 20px;
 }
 
-
 .proyectos__inner-text {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: center;  
-    padding: 2em; 
-    gap: 20px; 
+    text-align: center;
+    padding: 2em;
+    gap: 20px;
 }
 
 .img-vertical {
-    max-width: 90%; 
+    max-width: 90%;
 }
 
 .img-horizontal {
-    max-width: 70%; 
+    max-width: 70%;
 }
 
-
-/*CARRUSSEL VELAS*/
-
+/*CARRUSEL VELAS*/
 .carrussel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 7em; 
-    gap: 10px; 
+    padding: 7em;
+    gap: 10px;
 }
 
 .carrussel__items {
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
     gap: 80px;
     flex-wrap: wrap;
 }
 
 .carrussel__item {
     position: relative;
-    gap: 40px; 
+    gap: 40px;
     transition: transform 0.3s ease;
 }
 
 .carrussel__item:hover {
     transform: scale(1.4);
-    z-index: 40; 
+    z-index: 40;
 }
 
 .carrussel__btn {
@@ -255,24 +276,22 @@ h2 {
     font-size: 16px;
     cursor: pointer;
     border: none;
-    background-color: #0c0a09; 
+    background-color: #0c0a09;
     border-radius: 2em;
-    color: #f1f5f9; 
-    text-transform: uppercase; 
-} 
-
-.carrussel__btn:hover {
-    background-color: #f1f5f9; 
-    color: #0c0a09; 
+    color: #f1f5f9;
+    text-transform: uppercase;
 }
 
-/*SLIDER*/ 
+.carrussel__btn:hover {
+    background-color: #f1f5f9;
+    color: #0c0a09;
+}
 
+/*SLIDER*/
 .slider {
     position: relative;
     overflow: hidden;
-    margin: 0;  
-    
+    margin: 0;
 }
 
 .slider__container {
@@ -290,11 +309,8 @@ h2 {
     display: block;
 }
 
-
-/* ESTILO DE LAS SECCIONES: VELAS, FAROLILLOS Y CUADROS*/
-
-/*BANNER PRINCIPAL*/ 
-
+/*ESTILO DE LAS SECCIONES: VELAS, FAROLILLOS Y CUADROS*/
+/*BANNER PRINCIPAL*/
 .banner__img {
     display: block;
     width: 100%;
@@ -302,31 +318,30 @@ h2 {
 }
 
 /*INTRODUCTION*/
-
 .introduction {
-    display: flex; 
+    display: flex;
     justify-content: center;
-    padding: 4em; 
+    padding: 4em;
 }
 
 .introduction__container {
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px; 
+    gap: 15px;
     text-align: center;
     line-height: 2em;
-    width: 50%; 
+    width: 50%;
 }
 
-/*GALERÍA*/
+/*GALERÃA*/
 .image-slider {
     position: relative;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
-    padding: 0 0 5em; 
+    padding: 0 0 5em;
     text-align: center;
 }
 
@@ -358,38 +373,36 @@ h2 {
 }
 
 .image-slider__button svg:hover {
-   stroke: #f1f5f9; 
-
+    stroke: #f1f5f9;
 }
 
 /*IMAGENES ESCALONADAS*/
-
 .staggered {
-    display: flex; 
-    padding: 4em; 
+    display: flex;
+    padding: 4em;
 }
 
 .staggered__container {
-    display: flex; 
+    display: flex;
     justify-content: center;
-    gap: 4em; 
+    gap: 4em;
 }
 
 .staggered__top {
-    display: flex; 
-    max-width: 800px; 
+    display: flex;
+    max-width: 800px;
 }
 
 .staggered__top-img {
-    margin: -80px 0px 0px 0px; 
-    max-width: 900px; 
+    margin: -80px 0px 0px 0px;
+    max-width: 900px;
 }
 
 .staggered__bottom {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
-    flex-direction: column; 
-    align-items: end; 
+    flex-direction: column;
+    align-items: end;
 }
 
 .staggered__bottom-img {
@@ -397,27 +410,26 @@ h2 {
 }
 
 .staggered__bottom-text {
-   display: flex; 
-   justify-content: baseline; 
-   flex-direction: column; 
-   align-items: end;
-   text-align: end;
-   font-size: 11px; 
-   gap: 5px; 
-   line-height: 20px;
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+    font-size: 11px;
+    gap: 5px;
+    line-height: 20px;
 }
 
 /*PRINCIPAL TEXT*/
-
 .principal {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4em; 
+    padding: 4em;
 }
 
 .principal__container {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
@@ -427,53 +439,48 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px; 
+    font-size: 40px;
     text-align: center;
     max-width: 15em;
     font-weight: bold;
     line-height: 1.7em;
     text-transform: uppercase;
-    
 }
+
 .principal__img-text {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    text-align: center; 
-    max-width: 800px; 
-    gap: 10px; 
+    text-align: center;
+    max-width: 800px;
+    gap: 10px;
     margin-top: 15px;
     font-size: 12px;
     line-height: 23px;
     font-size: 14px;
 }
 
-
-.principal__img img{
+.principal__img img {
     display: flex;
     max-width: 800px;
 }
 
-/*MODIFICACIONES DE ALGUNAS SECCIONES DE LA "EL ESTUDIO"*/
-
+/*MODIFICACIONES DE ALGUNAS SECCIONES DEL HTML "EL ESTUDIO"*/
 .row {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: start;
     text-align: left;
-    gap: 40px; 
+    gap: 40px;
     width: 100%;
     height: auto;
-
 }
 
-
-
-
-/*FOOTER COMÚN EN TODAS LAS PÁGINAS DE LA WEB*/ 
-
+/*FOOTER COMÚN PARA TODA LA WEB*/
 .footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 16px;
     font-size: 12px;
     background-color: #fafaf9;
     padding: 2em;
@@ -485,26 +492,26 @@ h2 {
 }
 
 .footer__logo img {
-    padding: 1em; 
-
+    max-width: 100%;
+    height: auto;
 }
 
-.footer__contact, .footer__subscription {
+.footer__contact,
+.footer__subscription {
     display: flex;
     flex-direction: column;
 }
 
-.footer__contact h4, .footer__subscription h4 {
+.footer__contact h4,
+.footer__subscription h4 {
     font-size: 1.2em;
 }
-
 
 .footer__contact li {
     line-height: 2.5;
 }
 
 .footer__subscription p {
-   
     line-height: 2em;
 }
 
@@ -534,6 +541,50 @@ h2 {
 .footer__subscription button:hover {
     background-color: #f1f5f9;
     color: #0c0a09;
+}
+
+/* MEDIA QUERIES PARA EL RESPONSIVE*/
+@media (min-width: 600px) {
+    .proyectos__content {
+        flex-direction: row;
+    }
+
+    .staggered {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .introduction__container {
+        width: 70%;
+    }
+
+    .footer {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer__logo img {
+        width: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .header__overlay {
+        max-height: 20%;
+    }
+
+    .proyectos__content {
+        font-size: 18px;
+    }
+
+    .principal__text {
+        font-size: 30px;
+    }
+
+    .principal__img-text {
+        font-size: 16px;
+    }
 }
 
 
